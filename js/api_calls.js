@@ -1,7 +1,7 @@
 export async function get({ endpoint = "", id = "" }) {
   console.log("endpoint",endpoint)
   try {
-    const response = await fetch(`http://34.29.19.112:8443/${endpoint}/${id}`, , {
+    const response = await fetch(`http://34.29.19.112:8443/${endpoint}/${id}`, {
       mode: "cors",
       credentials: "include",
       headers: {
@@ -14,7 +14,7 @@ export async function get({ endpoint = "", id = "" }) {
     console.log(`response data: ${data}`)
     return data;
   } catch (error) {
-    console.error(error);
+    console.log(error);
   }
 }
 

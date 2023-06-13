@@ -1,4 +1,4 @@
-import { get } from "./api_calls.js";
+import { post } from "./api_calls.js";
 function create_student(params) {
   const item = `
                 
@@ -19,11 +19,7 @@ function create_student(params) {
                 <td class="align-middle text-center">
                   <span class="text-secondary text-xs font-weight-bold">${params.updatedAt}</span>
                 </td>
-                <td class="align-middle">
-                  <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                    Edit
-                  </a>
-                </td>
+                
               
                                 
 `;
@@ -38,7 +34,7 @@ function add_student(student) {
   students.appendChild(new_student);
 }
 
-const students = await get({ endpoint: "retriveallsessions" });
+const students = await post({ endpoint: "retriveallsessions" });
 console.log(students)
 students.forEach((student) => {
   add_student(student);
