@@ -79,10 +79,10 @@
                   <p class="mb-0">Enter your email and password to sign in</p>
                 </div>
                 <div class="card-body">
-                  <form role="form" action="http://34.29.19.112:8443/api/aut/signin">
+                  <form action="http://34.29.19.112:8443/api/auth/signin" method="post">
                     <label>Username</label>
                     <div class="mb-3">
-                      <input type="usdername" name="username" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="email-addon">
+                      <input type="username" name="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="email-addon">
                     </div>
                     <label>Password</label>
                     <div class="mb-3">
@@ -93,7 +93,7 @@
                       <label class="form-check-label" for="rememberMe">Remember me</label>
                     </div>
                     <div class="text-center">
-                      <button type="button" class="btn bg-gradient-info w-100 mt-4 mb-0">Sign in</button>
+                      <button type="submit" class="btn bg-gradient-info w-100 mt-4 mb-0">Sign in</button>
                     </div>
                   </form>
                 </div>
